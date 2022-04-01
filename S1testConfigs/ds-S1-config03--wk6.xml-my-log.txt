@@ -1,0 +1,168 @@
+# ds-sim server 14-Feb, 2022 @ MQ - client-server
+# Server-side simulator started with './ds-server -c ./S1testConfigs/ds-S1-config03--wk6.xml -v brief -n'
+# Waiting for connection to port 50000 of IP address 127.0.0.1
+RCVD HELO
+SENT OK
+RCVD AUTH luke
+# Welcome  luke!
+# The system information can be read from 'ds-system.xml'
+SENT OK
+RCVD REDY
+SENT JOBN 37 0 1621 3 700 3800
+RCVD SCHD 0 super 0
+t:         37 job     0 (waiting) on # 0 of server super (booting) SCHEDULED
+SENT OK
+RCVD REDY
+SENT JOBN 60 1 521 2 1500 2900
+RCVD SCHD 1 super 0
+t:         60 job     1 (waiting) on # 0 of server super (booting) SCHEDULED
+SENT OK
+RCVD REDY
+SENT JOBN 76 2 877 2 1500 2100
+RCVD SCHD 2 super 0
+t:         76 job     2 (waiting) on # 0 of server super (booting) SCHEDULED
+SENT OK
+RCVD REDY
+SENT JOBN 111 3 53 4 1800 5100
+RCVD SCHD 3 super 0
+t:        111 job     3 (waiting) on # 0 of server super (booting) SCHEDULED
+SENT OK
+RCVD REDY
+t:        127 job     0 on # 0 of server super RUNNING
+t:        127 job     1 on # 0 of server super RUNNING
+t:        127 job     2 on # 0 of server super RUNNING
+t:        127 job     3 on # 0 of server super RUNNING
+SENT JOBN 147 4 95 1 100 2000
+RCVD SCHD 4 super 0
+t:        147 job     4 (running) on # 0 of server super (active) SCHEDULED
+t:        147 job     4 on # 0 of server super RUNNING
+SENT OK
+RCVD REDY
+SENT JOBN 186 5 260 3 2700 2600
+RCVD SCHD 5 super 0
+t:        186 job     5 (running) on # 0 of server super (active) SCHEDULED
+t:        186 job     5 on # 0 of server super RUNNING
+SENT OK
+RCVD REDY
+SENT JOBN 228 6 5774 4 4000 7600
+RCVD SCHD 6 super 0
+t:        228 job     6 (waiting) on # 0 of server super (active) SCHEDULED
+SENT OK
+RCVD REDY
+SENT JOBN 255 7 911 2 500 2100
+RCVD SCHD 7 super 0
+t:        255 job     7 (waiting) on # 0 of server super (active) SCHEDULED
+SENT OK
+RCVD REDY
+SENT JOBN 279 8 1006 1 100 800
+RCVD SCHD 8 super 0
+t:        279 job     8 (waiting) on # 0 of server super (active) SCHEDULED
+SENT OK
+RCVD REDY
+SENT JOBN 284 9 362 2 600 1500
+RCVD SCHD 9 super 0
+t:        284 job     9 (waiting) on # 0 of server super (active) SCHEDULED
+SENT OK
+RCVD REDY
+SENT JOBN 286 10 231 1 100 1600
+RCVD SCHD 10 super 0
+t:        286 job    10 (waiting) on # 0 of server super (active) SCHEDULED
+SENT OK
+RCVD REDY
+SENT JOBN 298 11 29 1 500 600
+RCVD SCHD 11 super 0
+t:        298 job    11 (waiting) on # 0 of server super (active) SCHEDULED
+SENT OK
+RCVD REDY
+SENT JOBN 300 12 51 1 700 400
+RCVD SCHD 12 super 0
+t:        300 job    12 (waiting) on # 0 of server super (active) SCHEDULED
+SENT OK
+RCVD REDY
+SENT JOBN 302 13 9 3 1900 500
+RCVD SCHD 13 super 0
+t:        302 job    13 (waiting) on # 0 of server super (active) SCHEDULED
+SENT OK
+RCVD REDY
+SENT JOBN 307 14 10 4 3500 3900
+RCVD SCHD 14 super 0
+t:        307 job    14 (waiting) on # 0 of server super (active) SCHEDULED
+SENT OK
+RCVD REDY
+t:        310 job     4 on # 0 of server super COMPLETED
+SENT JCPL 310 4 super 0
+RCVD SCHD 4 super 0
+RCVD QUIT
+t:        459 job     5 on # 0 of server super COMPLETED
+t:        459 job     6 on # 0 of server super RUNNING
+t:        465 job     1 on # 0 of server super COMPLETED
+t:        465 job     7 on # 0 of server super RUNNING
+t:        465 job     8 on # 0 of server super RUNNING
+t:        968 job     7 on # 0 of server super COMPLETED
+t:        968 job     9 on # 0 of server super RUNNING
+t:        985 job     8 on # 0 of server super COMPLETED
+t:        985 job    10 on # 0 of server super RUNNING
+t:       1151 job    10 on # 0 of server super COMPLETED
+t:       1151 job    11 on # 0 of server super RUNNING
+t:       1182 job    11 on # 0 of server super COMPLETED
+t:       1182 job    12 on # 0 of server super RUNNING
+t:       1280 job    12 on # 0 of server super COMPLETED
+t:       1312 job     9 on # 0 of server super COMPLETED
+t:       1312 job    13 on # 0 of server super RUNNING
+t:       1632 job    13 on # 0 of server super COMPLETED
+t:       1759 job     0 on # 0 of server super COMPLETED
+t:       1759 job    14 on # 0 of server super RUNNING
+t:       1861 job     2 on # 0 of server super COMPLETED
+t:       1969 job    14 on # 0 of server super COMPLETED
+t:       3006 job     3 on # 0 of server super COMPLETED
+t:       3487 job     6 on # 0 of server super COMPLETED
+SENT QUIT
+# -----------[ Jobs in the waiting queue ]-----------
+# ---------------------------------------------------
+# --------[ Jobs created and yet, submitted ]--------
+# Job 15 created to be submitted at 310...
+# Job 16 created to be submitted at 316...
+# Job 17 created to be submitted at 320...
+# Job 18 created to be submitted at 322...
+# Job 19 created to be submitted at 325...
+# Job 20 created to be submitted at 329...
+# Job 21 created to be submitted at 332...
+# Job 22 created to be submitted at 336...
+# Job 23 created to be submitted at 336...
+# Job 24 created to be submitted at 340...
+# Job 25 created to be submitted at 342...
+# Job 26 created to be submitted at 346...
+# Job 27 created to be submitted at 347...
+# Job 28 created to be submitted at 351...
+# Job 29 created to be submitted at 360...
+# Job 30 created to be submitted at 362...
+# Job 31 created to be submitted at 362...
+# Job 32 created to be submitted at 393...
+# Job 33 created to be submitted at 394...
+# Job 34 created to be submitted at 427...
+# Job 35 created to be submitted at 434...
+# Job 36 created to be submitted at 464...
+# Job 37 created to be submitted at 475...
+# Job 38 created to be submitted at 477...
+# Job 39 created to be submitted at 491...
+# Job 40 created to be submitted at 501...
+# Job 41 created to be submitted at 502...
+# Job 42 created to be submitted at 502...
+# Job 43 created to be submitted at 505...
+# Job 44 created to be submitted at 514...
+# Job 45 created to be submitted at 628...
+# Job 46 created to be submitted at 660...
+# Job 47 created to be submitted at 677...
+# Job 48 created to be submitted at 687...
+# Job 49 created to be submitted at 714...
+# ---------------------------------------------------
+# -------------------------------------------------------------------------------------
+# 0 small servers used with a utilisation of 0.00 at the cost of $0.00
+# 0 medium servers used with a utilisation of 0.00 at the cost of $0.00
+# 0 large servers used with a utilisation of 0.00 at the cost of $0.00
+# 1 super servers used with a utilisation of 100.00 at the cost of $1.49
+# 0 ultrasuper servers used with a utilisation of 0.00 at the cost of $0.00
+# ==================================== [ Summary ] ====================================
+# actual simulation end time: 3487, #jobs: 15 (failed 0 times)
+# total #servers used: 1, avg util: 100.00% (ef. usage: 100.00%), total cost: $1.49
+# avg waiting time: 428, avg exec time: 815, avg turnaround time: 1243

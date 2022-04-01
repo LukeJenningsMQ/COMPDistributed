@@ -1,0 +1,101 @@
+# ds-sim server 14-Feb, 2022 @ MQ - client-server
+# Server-side simulator started with './ds-server -c ./S1testConfigs/ds-S1-config01--wk6.xml -v brief -n'
+# Waiting for connection to port 50000 of IP address 127.0.0.1
+RCVD HELO
+SENT OK
+RCVD AUTH luke
+# Welcome  luke!
+# The system information can be read from 'ds-system.xml'
+SENT OK
+RCVD REDY
+SENT JOBN 32 0 47066 1 700 600
+RCVD SCHD 0 t2.aws 0
+t:         32 job     0 (waiting) on # 0 of server t2.aws (booting) SCHEDULED
+SENT OK
+RCVD REDY
+SENT JOBN 54 1 217 1 400 800
+RCVD SCHD 1 t2.aws 0
+t:         54 job     1 (waiting) on # 0 of server t2.aws (booting) SCHEDULED
+SENT OK
+RCVD REDY
+SENT JOBN 55 2 1739 1 400 800
+RCVD SCHD 2 t2.aws 0
+t:         55 job     2 (waiting) on # 0 of server t2.aws (booting) SCHEDULED
+SENT OK
+RCVD REDY
+t:         92 job     0 on # 0 of server t2.aws RUNNING
+t:         92 job     1 on # 0 of server t2.aws RUNNING
+t:         92 job     2 on # 0 of server t2.aws RUNNING
+SENT JOBN 98 3 2172 1 200 1600
+RCVD SCHD 3 t2.aws 0
+t:         98 job     3 (running) on # 0 of server t2.aws (active) SCHEDULED
+t:         98 job     3 on # 0 of server t2.aws RUNNING
+SENT OK
+RCVD REDY
+SENT JOBN 105 4 83159 3 1200 3500
+RCVD SCHD 4 t2.aws 0
+t:        105 job     4 (running) on # 0 of server t2.aws (active) SCHEDULED
+t:        105 job     4 on # 0 of server t2.aws RUNNING
+SENT OK
+RCVD REDY
+SENT JOBN 123 5 125503 1 400 1200
+RCVD SCHD 5 t2.aws 0
+t:        123 job     5 (running) on # 0 of server t2.aws (active) SCHEDULED
+t:        123 job     5 on # 0 of server t2.aws RUNNING
+SENT OK
+RCVD REDY
+SENT JOBN 136 6 76615 1 1000 100
+RCVD SCHD 6 t2.aws 0
+t:        136 job     6 (running) on # 0 of server t2.aws (active) SCHEDULED
+t:        136 job     6 on # 0 of server t2.aws RUNNING
+SENT OK
+RCVD REDY
+SENT JOBN 142 7 135748 1 800 1300
+RCVD SCHD 7 t2.aws 0
+t:        142 job     7 (running) on # 0 of server t2.aws (active) SCHEDULED
+t:        142 job     7 on # 0 of server t2.aws RUNNING
+SENT OK
+RCVD REDY
+SENT JOBN 170 8 248 2 2000 1600
+RCVD SCHD 8 t2.aws 0
+t:        170 job     8 (running) on # 0 of server t2.aws (active) SCHEDULED
+t:        170 job     8 on # 0 of server t2.aws RUNNING
+SENT OK
+RCVD REDY
+t:        340 job     8 on # 0 of server t2.aws COMPLETED
+SENT JCPL 340 8 t2.aws 0
+RCVD SCHD 8 t2.aws 0
+RCVD QUIT
+t:       1553 job     2 on # 0 of server t2.aws COMPLETED
+t:       1756 job     3 on # 0 of server t2.aws COMPLETED
+t:      41558 job     1 on # 0 of server t2.aws COMPLETED
+t:      55920 job     6 on # 0 of server t2.aws COMPLETED
+t:      61966 job     4 on # 0 of server t2.aws COMPLETED
+t:      64323 job     0 on # 0 of server t2.aws COMPLETED
+t:      79160 job     5 on # 0 of server t2.aws COMPLETED
+t:      91924 job     7 on # 0 of server t2.aws COMPLETED
+SENT QUIT
+# -----------[ Jobs in the waiting queue ]-----------
+# ---------------------------------------------------
+# --------[ Jobs created and yet, submitted ]--------
+# Job 9 created to be submitted at 366...
+# Job 10 created to be submitted at 919...
+# Job 11 created to be submitted at 1631...
+# Job 12 created to be submitted at 1784...
+# Job 13 created to be submitted at 2073...
+# Job 14 created to be submitted at 2396...
+# Job 15 created to be submitted at 3408...
+# Job 16 created to be submitted at 3431...
+# Job 17 created to be submitted at 3496...
+# Job 18 created to be submitted at 3979...
+# Job 19 created to be submitted at 4723...
+# ---------------------------------------------------
+# -------------------------------------------------------------------------------------
+# 0 t1.micro servers used with a utilisation of 0.00 at the cost of $0.00
+# 0 t1.small servers used with a utilisation of 0.00 at the cost of $0.00
+# 0 t1.medium servers used with a utilisation of 0.00 at the cost of $0.00
+# 1 t2.aws servers used with a utilisation of 100.00 at the cost of $20.41
+# ==================================== [ Summary ] ====================================
+# actual simulation end time: 91924, #jobs: 9 (failed 0 times)
+# total #servers used: 1, avg util: 100.00% (ef. usage: 100.00%), total cost: $20.41
+# avg waiting time: 15, avg exec time: 44161, avg turnaround time: 44176
