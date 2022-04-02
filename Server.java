@@ -4,6 +4,7 @@ public class Server {
         String serverID;
         String state;
         int core;
+    //Server Object used to store information on servers, so when used for scheduling the code is more understandable
     public Server(String serverInput){
         serverInfo = serverInput.split(" ");
         serverType = serverInfo[0];

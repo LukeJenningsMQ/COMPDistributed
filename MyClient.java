@@ -59,6 +59,8 @@ public static void main(String args[])throws Exception{
     }
     int index = 0;
     String scheduled = "";
+
+    //This is where all the scheduling is done
     while(nextjob.equals("NONE") == false){ //checking that there is a new job
         String[] jobInfo = nextjob.split(" ");
         if(jobInfo[0].equals("JOBN")){ //checks that a JOBN messages came through and not a JCPL
@@ -68,9 +70,9 @@ public static void main(String args[])throws Exception{
             currentServer = LargestServers.get(index);//grabs nex server to schedule a job to
             if(currentServer.state.equals("unavailable") == false){//checks if the server is avaliable
                 dout.write(("SCHD " + jobInfo[2] + " "+ currentServer.serverType + " " + currentServer.serverID + "\n").getBytes());  
-                dout.flush();
+                dout.flush();//Schedule command is sent
                 scheduled =din.readLine();
-                if(scheduled.equals("OK")){
+                if(scheduled.equals("OK")){ //once approved a new job an can be asked for
                     index++; 
                     dout.write(("REDY\n").getBytes());  
                     dout.flush();
@@ -92,6 +94,8 @@ public static void main(String args[])throws Exception{
             break;
         }
     }
+    
+    //Once no more jobs, the program can quit
     dout.write(("QUIT\n").getBytes());  
     dout.flush();
     serverInput=din.readLine();   //gets server confirmation to quit    
