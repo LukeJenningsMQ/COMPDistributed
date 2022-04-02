@@ -12,15 +12,15 @@ public class Server {
         core = Integer.parseInt(serverInfo[4]);
     }
     public String getSeverType(){
-        return serverType;
+        return serverType; //Will give string on the type of the server 
     }
     public String getID(){
-        return serverID;
+        return serverID; // Will return string of the server ID
     }
     public String getState(){
-        return state;
+        return state; //Will return the server State
     }
     public int getCore(){
-        return core;
+        return core; //Will return the server core
     }
 }
