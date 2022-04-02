@@ -9,8 +9,9 @@ public static void main(String args[])throws Exception{
 
     String serverInput="";  //Used for when the server sends information to this client.
     String username = System.getProperty("user.name");   //Use for authenication
-    ArrayList<String> servers = new ArrayList<String>(); //Will store all servers
-    ArrayList<String[]> LargestServers = new ArrayList<String[]>(); //Will store servers that will be used for scheduling
+    ArrayList<Server> servers = new ArrayList<Server>(); //Will store all servers
+    ArrayList<Server> LargestServers = new ArrayList<Server>(); //Will store servers that will be used for scheduling
+    Server currentServer; //this varibale is the current server that is being looked at 
    
   
     dout.write(("HELO\n").getBytes()); //start of the handshake procedure  
@@ -27,26 +28,24 @@ public static void main(String args[])throws Exception{
         dout.flush();
         serverInput=din.readLine(); //will recieve DATA message from server 
         String[] info = serverInput.split(" "); //split the DATA Message up so we an gain how many servers to go through
-        int highestCores = -100; //this variable will be used to keep track of the higehest cores
+        int highestCore = -100; //this variable will be used to keep track of the higehest cores
         String selectedServerType = ""; //This will store the name of the largest server type
-        String[] serverInfo; 
         dout.write(("OK\n").getBytes());  
         dout.flush();
         for(int i = 0;i < Integer.parseInt(info[1]); i++){ 
             serverInput = din.readLine(); 
-            System.out.println("serverInput: " +serverInput);
-            servers.add(serverInput);
-            serverInfo = serverInput.split(" ");
-            if(Integer.parseInt(serverInfo[4]) > highestCores){
-                selectedServerType = serverInfo[0];
-                highestCores = Integer.parseInt(serverInfo[4]);
+            currentServer = new Server(serverInput);
+            servers.add(currentServer);
+            if(currentServer.getCore() > highestCore){
+                selectedServerType = currentServer.serverType;
+                highestCore = currentServer.getCore();
             }
         }
         for(int j = 0; j < servers.size(); j++){
-            serverInfo = servers.get(j).split(" ");
-                    if(serverInfo[0].equals(selectedServerType)){
-                        LargestServers.add(serverInfo);
-                    }
+                currentServer = servers.get(j);
+                if(currentServer.serverType.equals(selectedServerType)){
+                    LargestServers.add(currentServer);
+                }
         }
         dout.write(("OK\n").getBytes());  
         dout.flush();
@@ -64,8 +63,9 @@ public static void main(String args[])throws Exception{
             if(index == LargestServers.size()){
                 index = 0;
             }
-            if(LargestServers.get(index)[2].equals("unavailable") == false){
-                dout.write(("SCHD " + jobInfo[2] + " "+ LargestServers.get(index)[0] + " " + LargestServers.get(index)[1] + "\n").getBytes());  
+            currentServer = LargestServers.get(index);
+            if(currentServer.state.equals("unavailable") == false){
+                dout.write(("SCHD " + jobInfo[2] + " "+ currentServer.serverType + " " + currentServer.serverID + "\n").getBytes());  
                 dout.flush();
                 scheduled =din.readLine();
                 if(scheduled.equals("OK")){
