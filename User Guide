@@ -1,0 +1,7 @@
+User Guide
+1. First compile Server.java, by going javac Server.java 
+(Important to note that this is not MyServer.java but Server.java, MyServer.java was made to test socketing programming in previous workshops. Server.java is an object that we in MyClient.java)
+2. Compile MyClient.java to get the lastest version. e.g. javac MyClient.java
+3. You can now run the precompiled ds-server in a terminal
+4. run MyClient. e.g. java MyClient
+5. You could also run with the test suite. e.g. ./demoS1.sh -n MyClient.class
